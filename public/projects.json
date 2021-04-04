@@ -1,0 +1,230 @@
+{
+    "projects": [
+        {
+            "id" : 1,
+            "title" : "Sistema de Inventario de Tienda",
+            "technologies": [
+                {
+                    "name": "Java",
+                    "img": "./assets/img/langs/java.png"
+                },
+                {
+                    "name": "Java JSP",
+                    "img": "./assets/img/langs/java.png"
+                },
+                {
+                    "name": "JavaScript",
+                    "img": "./assets/img/langs/javascript.png"
+                },
+                {
+                    "name": "HTML",
+                    "img": "./assets/img/langs/html.png"
+                },
+                {
+                    "name": "MySQL",
+                    "img": "./assets/img/databases/mysql.png"
+                },
+                {
+                    "name": "JQuery",
+                    "img": "./assets/img/frameworks/jquery.png"
+                },
+                {
+                    "name": "Bootstrap",
+                    "img": "./assets/img/frameworks/bootstrap.png"
+                }
+            ],
+            "images": [
+                {
+                    "url": "./assets/img/projects/project-store-jsp/ptjsp-1.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-store-jsp/ptjsp-1.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-store-jsp/ptjsp-1.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-store-jsp/ptjsp-1.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-store-jsp/ptjsp-1.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-store-jsp/ptjsp-1.jpg"
+                }
+            ],
+            "notes" : [
+                "<p>Este proyecto fue hecho durante el tercer ciclo en mi instituto, solamente tiene parte de administrador.</p>",
+                "<span class='d-block'>Funciones: </span>",
+                "<span class='d-block mt-3'>Lado Administrador: </span>",
+                "<span class='d-block mt-2'>- Hacer mantenimiento a casi todo el sistema (clientes, empleados, productos, etc..)</span>"
+            ]
+        },
+        {
+            "id" : 2,
+            "title" : "Sistema de Matriculas",
+            "technologies": [
+                {
+                    "name": "C#",
+                    "img": "./assets/img/langs/c-sharp.png"
+                },
+                {
+                    "name": "C# Linq",
+                    "img": "./assets/img/langs/c-sharp.png"
+                },
+                {
+                    "name": "SQL Server",
+                    "img": "./assets/img/databases/sql-server.jpg"
+                }
+            ],
+            "images": [
+                {
+                    "url": "./assets/img/projects/project-matricula/pmat-desk-app-1.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-matricula/pmat-desk-app-2.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-matricula/pmat-desk-app-3.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-matricula/pmat-desk-app-4.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-matricula/pmat-desk-app-5.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-matricula/pmat-desk-app-5-1.jpg"
+                }
+            ],
+            "notes" : [
+                "<p>Este proyecto fue hecho durante mi tercer ciclo en mi instituto, a diferencia de otros proyectos o sistemas realizados , este proyecto es un programa de escritorio hecho con <span class='target' onclick='$(\".tab.details[data-tab=0]\").trigger(\"click\")'>estas tecnologias</span></p>",
+                "<span class='d-block'>Funciones: </span>",
+                "<span class='d-block mt-3'>- Matricular alumnos</span>",
+                "<span class='d-block'>- Editar datos personales</span>",
+                "<span class='d-block'>- Buscar alumnos, apoderados, matriculas</span>",
+                "<span class='d-block'>- Editar alumnos, apoderados, matriculas</span>",
+                "<span class='d-block'>- Deshabilitar alumnos, apoderados</span>"
+            ]
+        },
+        {
+            "id" : 3,
+            "title" : "Sistema de Colegio",
+            "technologies": [
+                {
+                    "name": "Angular - Frontend",
+                    "img": "./assets/img/frameworks/angular-logo.png"
+                },
+                {
+                    "name": "Spring Boot - Backend",
+                    "img": "./assets/img/frameworks/spring-boot-only-logo.png"
+                },
+                {
+                    "name": "Java",
+                    "img": "./assets/img/langs/java.png"
+                },
+                {
+                    "name": "Javascript",
+                    "img": "./assets/img/langs/javascript.png"
+                },
+                {
+                    "name": "MySQL",
+                    "img": "./assets/img/databases/mysql.png"
+                }
+            ],
+            "images": [
+                {
+                    "url": "./assets/img/projects/project-school/project-school-1.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-school/project-school-1-1.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-school/project-school-1-2.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-school/project-school-2.jpg"
+                }
+            ],
+            "notes" : [
+                "<p>Este proyecto lo realize en el 4to ciclo utilizando distintas tecnologias que aprendi en el transcurso de mi carrera, cuenta con parte de apoderados, alumnos y admin</p>",
+                "<span class='d-block'>Funciones: </span>",
+                "<span class='d-block mt-3'>Lado Apoderado: </span>",
+                "<span class='d-block mt-2'>- Pagar matriculas (simulacion)</span>",
+                "<span class='d-block'>- Ver matriculas sin pagar</span>",
+                "<span class='d-block'>- Mostrar informacion de su hijo</span>",
+                "<span class='d-block'>- Editar datos personales</span>",
+                "<span class='d-block mt-3'>Lado Alumno: </span>",
+                "<span class='d-block mt-2'>- Ver notas de cada bimestre</span>",
+                "<span class='d-block'>- Ver matriculas que han sido pagadas</span>",
+                "<span class='d-block'>- Editar datos personales</span>",
+                "<span class='d-block'>- Ver compañeros de su misma aula</span>",
+                "<span class='d-block mt-3'>Lado Admin:</span>",
+                "<span class='d-block mt-2'>- Mantenimiento de matriculas, apoderados, alumnos, notas, etc...</span>"
+            ]
+        },
+        {
+            "id" : 4,
+            "title" : "Sistema de Tienda de Productos Tecnologicos e Informaticos",
+            "technologies": [
+                {
+                    "name": "Angular - Frontend",
+                    "img": "./assets/img/frameworks/angular-logo.png"
+                },
+                {
+                    "name": "C# AspNet Core - Backend",
+                    "img": "./assets/img/frameworks/aspnet.png"
+                },
+                {
+                    "name": "C#",
+                    "img": "./assets/imglangs/c-sharp.png"
+                },
+                {
+                    "name": "Javascript",
+                    "img": "./assets/img/langs/javascript.png"
+                },
+                {
+                    "name": "JQuery",
+                    "img": "./assets/img/frameworks/jquery.png"
+                },
+                {
+                    "name": "Bootstrap",
+                    "img": "./assets/img/frameworks/bootstrap.png"
+                },
+                {
+                    "name": "SQL Server",
+                    "img": "./assets/img/databases/sql-server.jpg"
+                }
+            ],
+            "images": [
+                {
+                    "url": "./assets/img/projects/project-store/project-store-angular-1.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-store/project-store-angular-1.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-store/project-store-angular-1.jpg"
+                },
+                {
+                    "url": "./assets/img/projects/project-store/project-store-angular-1.jpg"
+                }
+            ],
+            "notes" : [
+                "<p>Este proyecto lo realize en el 4to ciclo para el proyecto final , este sistema contiene parte del cliente como panel de administrador, a diferencia de otro proyecto que hice anteriormente este proyecto es mas completo.</p>",
+                "<span class='d-block'>Funciones: </span>",
+                "<span class='d-block mt-3'>Lado Cliente: </span>",
+                "<span class='d-block mt-2'>- Comprar Productos</span>",
+                "<span class='d-block'>- Ver pedidos</span>",
+                "<span class='d-block'>- Ver y descargar Boleta o Factura</span>",
+                "<span class='d-block'>- Editar datos personales</span>",
+                "<span class='d-block'>- Buscar productos</span>",
+                "<span class='d-block'>- Ver resumen de pedido</span>",
+                "<span class='d-block mt-3'>Lado Administrador: </span>",
+                "<span class='d-block mt-2'>- Ver ganancias del mes y un grafico</span>",
+                "<span class='d-block mt-3'>- Ver cantidad de usuarios registrados en la pagina</span>",
+                "<span class='d-block mt-3'>- Hacer mantenimiento a casi todo el sistema (boletas, facturas, clientes, pedidos, productos, etc..)</span>"
+            ]
+        }
+    ]
+}

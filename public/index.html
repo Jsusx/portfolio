@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Jesus Portfolio</title>
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/54382938?s=400&u=003c3f3e3010774fbeedf7515a0efa4816811db1&v=4" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/slick.css"/>
+    <link rel="stylesheet" href="./assets/css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body ng-controller="main">
+    <div class="cm-overlay">
+    </div>
+    <div class="cm cm-center l" id="projects">
+        <div class="cm-content-bg">
+            <div class="cm-content">
+                <h2 class="cm-title">{{ project_data.title }}</h2>
+            </div>
+            <div class="cm-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div id="p-slider-1" data-state="0"></div>
+                        <div id="for-project-slider"></div>
+                    </div>
+                    <div class="col-lg mt-0">
+                        <div class="cm-project-info">
+                            <div class="row">
+                                <div class="col-lg cmt-0">
+                                    <span class="tab details active" data-tab-type="project" data-tab="0">Tecnologias</span>
+                                </div>
+                                <div class="col-lg cmt-0">
+                                    <span class="tab details" data-tab-type="project" data-tab="1" >Mas Informacion</span>
+                                </div>
+                            </div>
+                            <div class="technologies">
+                                <div class="row" id="techs"></div>
+                            </div>
+                            <div class="notes" id="project-desc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="cm-close" ng-click="close($event)">Close</span>
+    <nav class="navbar navbar-expand-lg custom-nav">
+        <div class="container">
+            <div class="brand-group">
+                <div class="nav-img-group">
+                    <img class="nav-img"  src="https://avatars.githubusercontent.com/u/54382938?s=400&u=003c3f3e3010774fbeedf7515a0efa4816811db1&v=4" alt="">
+                </div>
+                <span class="brand-text">jsusx</span>
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-url">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="title-group">
+        <h2 class="title-text">Jesus Saldarriaga</h2>
+        <p class="text-light text-center" id="title-sub-text"></p>
+    </div>
+    <div class="information">
+        <div class="container">
+            <div class="info-container">
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="info-background">
+                                        <div class="group-img">
+                                            <img class="img-info" src="https://avatars.githubusercontent.com/u/54382938?s=400&u=003c3f3e3010774fbeedf7515a0efa4816811db1&v=4" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg">
+                                    <div class="info-background">
+                                        <div class="info-content">
+                                            <h5 class="mb-4">Sobre mi: </h5>
+                                            <p>Soy un estudiante cursando el 5to ciclo en el instituto de IDAT <span class="text-red">(Peru)</span> en la carrera de desarrollo de sistemas, cuento con <span class="text-blue">{{ age }}</span> años de edad y aun no tengo experiencia laboral pero tengo distintos conocimientos en distintas tecnologias que he ido aprendiendo alrededor del tiempo que he estado aprendiendo.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <div class="skills-background" id="skills-content">
+                        <h2 class="text-light">Skills: </h2>
+                        <div class="skills-info">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <span class="tab skill active" data-tab-type="skill" data-tab="0">Lenguajes</span>
+                                </div>
+                                <div class="col-lg">
+                                    <span class="tab skill" data-tab-type="skill" data-tab="1">Databases</span>
+                                </div>
+                                <div class="col-lg">
+                                    <span class="tab skill" data-tab-type="skill" data-tab="3">Frameworks</span>
+                                </div>
+                            </div>
+                            <div class="skill-content" id="languages">
+                                <h4 class="text-center text-light mb-5">Lenguajes de Programacion</h4>
+                                <div class="skill-group">
+                                    <div class="skill">
+                                        <div class="skill-img-group">
+                                            <img class="skill-img" src="./assets/img/langs/python.png" alt="">
+                                        </div>
+                                        <h5 class="skill-text">Python</h5>
+                                    </div>
+                                    <div class="skill-bar-group">
+                                        <span class="skill-bar"></span>
+                                        <span class="skill-bar-content" id="skill-python" title="Python"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-group">
+                                    <div class="skill">
+                                        <div class="skill-img-group">
+                                            <img class="skill-img" src="./assets/img/langs/c-sharp.png" alt="">
+                                        </div>
+                                        <h5 class="skill-text">C#</h5>
+                                    </div>
+                                    <div class="skill-bar-group">
+                                        <span class="skill-bar"></span>
+                                        <span class="skill-bar-content" id="skill-c-plus" title="C#"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-group">
+                                    <div class="skill">
+                                        <div class="skill-img-group">
+                                            <img class="skill-img" src="./assets/img/langs/java.png" alt="">
+                                        </div>
+                                        <h5 class="skill-text">Java</h5>
+                                    </div>
+                                    <div class="skill-bar-group">
+                                        <span class="skill-bar"></span>
+                                        <span class="skill-bar-content" id="skill-java" title="Java"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-group">
+                                    <div class="skill">
+                                        <div class="skill-img-group">
+                                            <img class="skill-img" src="./assets/img/langs/javascript.png" alt="">
+                                        </div>
+                                        <h5 class="skill-text">Javascript</h5>
+                                    </div>
+                                    <div class="skill-bar-group">
+                                        <span class="skill-bar"></span>
+                                        <span class="skill-bar-content" id="skill-javascript" title="Javascript"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-group">
+                                    <div class="skill">
+                                        <div class="skill-img-group">
+                                            <img class="skill-img" src="./assets/img/langs/html.png" alt="">
+                                        </div>
+                                        <h5 class="skill-text">HTML / CSS</h5>
+                                    </div>
+                                    <div class="skill-bar-group">
+                                        <span class="skill-bar"></span>
+                                        <span class="skill-bar-content" id="skill-html-css" title="HTML / CSS"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-group">
+                                    <div class="skill">
+                                        <div class="skill-img-group">
+                                            <img class="skill-img" src="./assets/img/langs/php.jpg" alt="">
+                                        </div>
+                                        <h5 class="skill-text">PHP</h5>
+                                    </div>
+                                    <div class="skill-bar-group">
+                                        <span class="skill-bar"></span>
+                                        <span class="skill-bar-content" id="skill-php" title="PHP"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-content" id="databases">
+                                <h4 class="text-center text-light mb-5">Bases de Datos</h4>
+                                <div class="row w-100 ms-0">
+                                    <div class="col-lg-4">
+                                        <div class="framework-card">
+                                            <div class="framework-card-title">
+                                                <div class="framework-img-group">
+                                                    <img src="./assets/img/databases/sql-server.jpg" class="framework-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="framework-card-body">
+                                                <span class="framework-name">SQL Server</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="framework-card">
+                                            <div class="framework-card-title">
+                                                <div class="framework-img-group mysql">
+                                                    <img src="./assets/img/mysql-logo.jpg" class="framework-img mysql" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="framework-card-body">
+                                                <span class="framework-name">MySQL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="framework-card">
+                                            <div class="framework-card-title">
+                                                <div class="framework-img-group mysql">
+                                                    <img src="./assets/img/databases/oracle.png" class="framework-img mysql" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="framework-card-body">
+                                                <span class="framework-name">Oracle Database</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-content" id="frameworks">
+                                <h4 class="text-center text-light mb-5">Frameworks</h4>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="framework-card">
+                                            <div class="framework-card-title">
+                                                <div class="framework-img-group">
+                                                    <img src="./assets/img/frameworks/Flask.png" class="framework-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="framework-card-body">
+                                                <span class="framework-name">Flask</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="framework-card">
+                                            <div class="framework-card-title">
+                                                <div class="framework-img-group">
+                                                    <img src="./assets/img/frameworks/aspnet.png" class="framework-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="framework-card-body">
+                                                <span class="framework-name">Asp Net Core & Framework</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="framework-card">
+                                            <div class="framework-card-title">
+                                                <div class="framework-img-group">
+                                                    <img src="./assets/img/frameworks/spring-boot.png" class="framework-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="framework-card-body">
+                                                <span class="framework-name">Spring Boot</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="framework-card">
+                                            <div class="framework-card-title">
+                                                <div class="framework-img-group">
+                                                    <img src="./assets/img/frameworks/angular.png" class="framework-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="framework-card-body">
+                                                <span class="framework-name">Angular</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="framework-card">
+                                            <div class="framework-card-title">
+                                                <div class="framework-img-group">
+                                                    <img src="./assets/img/frameworks/react-logo.jpg" class="framework-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="framework-card-body">
+                                                <span class="framework-name">React</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projects">
+        <div class="container">
+            <div class="projects-content" id="projects-content">
+                <div class="mt-4">
+                    <h2 class="text-light text-center">Proyectos</h2>
+                    <p class="text-light text-center mt-4" id="projects-text"></p>
+                </div>
+                <div class="row mt-5 d-flex justify-content-center">
+                    <div class="col-lg-5 position-relative">
+                        <div class="project-card">
+                            <div class="project-card-head">
+                                <div class="project-group-img">
+                                    <img src="./assets/img/projects/project-store-jsp/ptjsp-1.jpg" class="project-preview" alt="">
+                                </div>
+                            </div>
+                            <div class="project-card-body">
+                                <div class="project-info">
+                                    <span class="text-center d-block text-light">Sistema de Almacen de Tienda</span>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="row w-100">
+                                            <div class="col-lg">
+                                                <a href="#asda" class="project-details" ng-click="project(1, $event)">
+                                                    <span class="project-icon-info"><i class="fas fa-info-circle"></i></span>
+                                                    <h6>Read more</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg">
+                                                <a href="https://github.com/jsusx" target="__blank" class="project-repo">
+                                                    <span class="project-icon-info"><i class="fab fa-github"></i></span>
+                                                    <h6>Repository</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="project-card">
+                            <div class="project-card-head">
+                                <div class="project-group-img">
+                                    <img src="./assets/img/projects/project-matricula/pmat-desk-app-1.jpg" class="project-preview" alt="">
+                                </div>
+                            </div>
+                            <div class="project-card-body">
+                                <div class="project-info">
+                                    <span class="text-center d-block text-light">Sistema de Matriculas</span>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="row w-100">
+                                            <div class="col-lg">
+                                                <a href="#" class="project-details" ng-click="project(2, $event)">
+                                                    <span class="project-icon-info"><i class="fas fa-info-circle"></i></span>
+                                                    <h6>Read more</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg">
+                                                <a href="https://github.com/jsusx" target="__blank" class="project-repo">
+                                                    <span class="project-icon-info"><i class="fab fa-github"></i></span>
+                                                    <h6>Repository</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="project-card">
+                            <div class="project-card-head">
+                                <div class="project-group-img">
+                                    <img src="./assets/img/projects/project-school/project-school-1.jpg" class="project-preview" alt="">
+                                </div>
+                            </div>
+                            <div class="project-card-body">
+                                <div class="project-info">
+                                    <span class="text-center d-block text-light">Sistema de Colegio</span>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="row w-100">
+                                            <div class="col-lg">
+                                                <a href="#" class="project-details" ng-click="project(3, $event)">
+                                                    <span class="project-icon-info"><i class="fas fa-info-circle"></i></span>
+                                                    <h6>Read more</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg">
+                                                <a href="https://github.com/jsusx" target="__blank" class="project-repo">
+                                                    <span class="project-icon-info"><i class="fab fa-github"></i></span>
+                                                    <h6>Repository</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="project-card">
+                            <div class="project-card-head">
+                                <div class="project-group-img">
+                                    <img src="./assets/img/projects/project-store/project-store-angular-1.jpg" class="project-preview" alt="">
+                                </div>
+                            </div>
+                            <div class="project-card-body">
+                                <div class="project-info">
+                                    <span class="text-center d-block text-light">Sistema de Tienda</span>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="row w-100">
+                                            <div class="col-lg">
+                                                <a href="#" class="project-details" ng-click="project(4, $event)">
+                                                    <span class="project-icon-info"><i class="fas fa-info-circle"></i></span>
+                                                    <h6>Read more</h6>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg">
+                                                <a href="https://github.com/jsusx" target="__blank" class="project-repo">
+                                                    <span class="project-icon-info"><i class="fab fa-github"></i></span>
+                                                    <h6>Repository</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="container">
+            <div class="contact-background">
+                <h2 class="text-center">Contacto</h2>
+                <div class="contact-form">
+                    <form id="contact-form" ng-submit="contact($event)" method="POST">
+                        <div class="contact-group">
+                            <label for="name">Nombre </label>
+                            <input type="text" name="name" id="name" class="contact-input">
+                        </div>
+                        <div class="contact-group">
+                            <label for="email">Correo </label>
+                            <input type="email" name="_replyto" id="email" class="contact-input">
+                        </div>
+                        <div class="contact-group">
+                            <label for="message">Mensaje </label>
+                            <textarea name="message" id="message" class="contact-input" cols="5" rows="5"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="contact-btn">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row w-100">
+                <div class="col p-3">
+                    <div class="d-flex justify-content-center">
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://github.com/jsusx" target="_blank" class="footer-icon"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="d-block text-center text-light d-lg-block mt-3">Developed by <span class="text-blue">jsusx</span> © {{ year }} All rights reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
