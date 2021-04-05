@@ -825,7 +825,7 @@ FOOTER
     color: #505050;
 }
 
-@media (min-width: 450px){
+@media (min-width: 150px){
     .skills-background{
         margin: 5px;
         margin-top: 150px;
@@ -839,8 +839,26 @@ FOOTER
 
     .projects-content{
         margin: 5px;
+        padding: 20px;
+        margin-bottom: 25px;
     }
     
+
+    .contact-form{
+        margin: 0px;
+        padding: 15px;
+    }
+
+    .contact-background{
+        margin: 10px;
+        padding: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .contact{
+        padding: 5px;
+    }
 
     .projects{
         padding: 10px;
@@ -860,6 +878,16 @@ FOOTER
         padding: 30px;
     }
 
+    .contact-form{
+        margin: 50px;
+        padding: 40px;
+    }
+
+    .contact-background{
+        margin: 70px;
+        padding: 40px;
+    }
+
     .projects{
         padding: 30px;
     }
@@ -870,6 +898,7 @@ FOOTER
 
     .projects-content{
         margin: 70px;
+        padding: 40px;
     }
 
     .project-card:hover .project-card-body .project-info{
